@@ -46,7 +46,7 @@ docker-compose down
   "meta": {"url": "www.naver.com"}
   }
   ```
-![image](https://github.com/user-attachments/assets/0a0c5bbb-a15d-4390-ad54-d50015a12d8c)
+  ![image](https://github.com/user-attachments/assets/364ceadb-c48d-4fc6-913e-e069493d5b96)
 
 To change the endpoints, update the code in api/app.py
 
