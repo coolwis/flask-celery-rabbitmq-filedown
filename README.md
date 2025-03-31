@@ -18,6 +18,12 @@ git clone https://github.com/coolwis/flask-celery-rabbitmq-filedown.git
 2) celery-queue/dockerfile 수정: worker 실행 명령문
    # ENTRYPOINT ["celery", "worker", "--app=celery_worker.app", "--loglevel=info"]
    ENTRYPOINT ["celery","-A","celery_worker", "worker", "--loglevel=info"]
+3) flask-restplus deprected lib
+   - error: 
+   ImportError: cannot import name 'cached_property'
+
+   - requirements.txt add =>
+     Werkzeug==0.16.0
    
 ```
 ### Build and Run
