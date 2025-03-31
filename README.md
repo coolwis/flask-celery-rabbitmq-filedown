@@ -10,6 +10,16 @@ A basic [Docker Compose](https://docs.docker.com/compose/) template for orchestr
 git clone https://github.com/coolwis/flask-celery-rabbitmq-filedown.git
 ```
 
+## bug Fix 
+```bash
+1) backend redis로 수정,  rabbitmq 에러남
+  CELERY_RESULT_BACKEND = 'redis://redis:6379'
+
+2) celery-queue/dockerfile 수정: worker 실행 명령문
+   # ENTRYPOINT ["celery", "worker", "--app=celery_worker.app", "--loglevel=info"]
+   ENTRYPOINT ["celery","-A","celery_worker", "worker", "--loglevel=info"]
+   
+```
 ### Build and Run
 
 ```unix
