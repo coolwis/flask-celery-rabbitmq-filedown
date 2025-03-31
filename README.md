@@ -5,7 +5,9 @@ A basic [Docker Compose](https://docs.docker.com/compose/) template for orchestr
 ## Installation
 
 ```unix
-git clone https://github.com/ChenYuTingJerry/flask-celery-rabbitmq.git
+  
+원본:  git clone https://github.com/ChenYuTingJerry/flask-celery-rabbitmq.git
+git clone https://github.com/coolwis/flask-celery-rabbitmq-filedown.git
 ```
 
 ### Build and Run
