@@ -43,7 +43,7 @@ class TaskStatus(Resource):
     def get(self, task_id):
         res = celery.AsyncResult(task_id)
         print("@@@@@ AsyncResult>>>")
-        print(res)
+        print(res.state)
         if res.state == states.PENDING:
             return res.state
         else:
