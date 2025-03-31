@@ -38,6 +38,16 @@ To shut down:
 docker-compose down
 ```
 
+### test  
+- POST type api
+  ```bash
+  {
+  "task" :"ParseWebLinks",
+  "meta": {"url": "www.naver.com"}
+  }
+  ```
+![image](https://github.com/user-attachments/assets/0a0c5bbb-a15d-4390-ad54-d50015a12d8c)
+
 To change the endpoints, update the code in api/app.py
 
 Task changes should happen in celery-queue/{module}/tasks.py
