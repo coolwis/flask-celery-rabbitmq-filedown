@@ -15,12 +15,14 @@ services:
             dockerfile: dockerfile
         depends_on:
             - rabbit
+            - redis
     worker_2:
         build:
             context: celery-queue
             dockerfile: dockerfile
         depends_on:
             - rabbit
+            - redis
     server:
         container_name: flask-celery
         build:
@@ -42,3 +44,7 @@ services:
             - 5555:5555
         depends_on:
             - rabbit
+
+    redis:
+        image: redis
+        
