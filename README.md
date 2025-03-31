@@ -43,7 +43,7 @@ docker-compose down
   ```bash
   {
   "task" :"ParseWebLinks",
-  "meta": {"url": "www.naver.com"}
+  "meta": {"url": "https://www.naver.com"}
   }
   ```
   ![image](https://github.com/user-attachments/assets/364ceadb-c48d-4fc6-913e-e069493d5b96)
