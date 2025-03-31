@@ -26,14 +26,24 @@ class Task(Resource):
 
 def parse_task(req_data):
     body = json.loads(req_data)
+    print("body>>>>>>>>>>>>>>")
+    print(body)
     task = tasks.get(body['task'])
     kwargs = body['meta']
+    
+    print("task>>>>>>>>>>>>>>")
+    print(task)
+    
+    print("kwargs>>>>>>>>>>>>>>")
+    print(kwargs)
     return task, kwargs
 
 
 class TaskStatus(Resource):
     def get(self, task_id):
         res = celery.AsyncResult(task_id)
+        print("@@@@@ AsyncResult>>>")
+        print(res)
         if res.state == states.PENDING:
             return res.state
         else:

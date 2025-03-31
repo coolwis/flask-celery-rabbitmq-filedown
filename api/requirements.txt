@@ -1,3 +1,5 @@
 flask
 flask-restplus
 celery
+redis
+Werkzeug==0.16.0
